@@ -1,0 +1,9 @@
+.git/**
+.gitignore
+.github/**
+.vscode/**
+.vscode-test/**
+node_modules/**
+*.vsix
+package-lock.json
+images/icon.svg

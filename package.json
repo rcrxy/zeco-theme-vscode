@@ -1,0 +1,42 @@
+{
+    "name": "zeco-theme",
+    "displayName": "Zeco Theme",
+    "description": "A carefully tuned color theme for Visual Studio Code.",
+    "author": {
+        "name": "zeco"
+    },
+    "license": "SEE LICENSE IN LICENSE",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rcrxy/zeco-theme-vscode.git"
+    },
+    "publisher": "zeco",
+    "version": "0.0.1",
+    "icon": "images/icon.png",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "theme",
+        "dark",
+        "color-theme",
+        "syntax-highlighting",
+        "zeco"
+    ],
+    "galleryBanner": {
+        "color": "#1F1F1F",
+        "theme": "dark"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "Zeco Theme Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/dark.json"
+            }
+        ]
+    }
+}
