@@ -11,7 +11,7 @@
         "url": "https://github.com/rcrxy/zeco-theme-vscode.git"
     },
     "publisher": "zeco",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.80.0"

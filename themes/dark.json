@@ -593,7 +593,7 @@
             "scope": ["entity.name.function.extension", "support.function.extension"],
             "settings": {
                 "foreground": "#FFADE4FF",
-                "fontStyle": "italic bold"
+                "fontStyle": "italic"
             }
         },
         {
