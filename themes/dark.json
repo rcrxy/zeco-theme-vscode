@@ -57,7 +57,7 @@
         "dropdown.listBackground": "#1F1F1FFF",
         "editor.background": "#1F1F1FFF",
         "editor.findMatchBackground": "#9E6A03FF",
-        "editor.foreground": "#cccccccc",
+        "editor.foreground": "#EEEEEEFF",
         "editor.inactiveSelectionBackground": "#3A3D417E",
         "editor.lineHighlightBackground": "#1073CF2D",
         "editor.lineHighlightBorder": "#9FCED154",
