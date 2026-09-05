@@ -12,8 +12,6 @@
         "number": "#14E901FF",
         "operator": "#FFFFFFFF",
         "preprocessorText": "#999999FF",
-        // "property": "#669EE9FF",
-        // "string": "#FFFFFFFF",
         "text": "#999999FF",
         "type": "#4EC9B0FF",
         "variable": "#669EE9FF"
@@ -59,7 +57,7 @@
         "dropdown.listBackground": "#1F1F1FFF",
         "editor.background": "#1F1F1FFF",
         "editor.findMatchBackground": "#9E6A03FF",
-        "editor.foreground": "#CCCCCCFF",
+        "editor.foreground": "#cccccccc",
         "editor.inactiveSelectionBackground": "#3A3D417E",
         "editor.lineHighlightBackground": "#1073CF2D",
         "editor.lineHighlightBorder": "#9FCED154",
@@ -184,7 +182,6 @@
     "tokenColors": [
         {
             "scope": [
-                "meta.embedded",
                 "source.groovy.embedded",
                 "string meta.image.inline.markdown",
                 "variable.legacy.builtin.python",
@@ -323,51 +320,24 @@
         },
         {
             "scope": [
-                "storage.type",
-                "storage.type.numeric.go",
-                "storage.type.byte.go",
-                "storage.type.boolean.go",
-                "storage.type.string.go",
-                "storage.type.uintptr.go",
-                "storage.type.error.go",
-                "storage.type.rune.go",
-                "storage.type.generic.cs",
-                "storage.type.modifier.cs",
-                "storage.type.variable.cs",
-                "storage.type.annotation.java",
-                "storage.type.generic.java",
-                "storage.type.object.array.java",
-                "storage.type.primitive.array.java",
-                "storage.type.primitive.java",
-                "storage.type.token.java",
-                "storage.type.groovy",
-                "storage.type.annotation.groovy",
-                "storage.type.parameters.groovy",
-                "storage.type.generic.groovy",
-                "storage.type.object.array.groovy",
-                "storage.type.primitive.array.groovy",
-                "storage.type.primitive.groovy",
-                "storage.type.primitive.c",
-                "storage.type.primitive.cpp",
-                "storage.type.attribute",
+                "support.type",
+                "support.class",
+                "support.attribute",
                 "support.constant.math",
                 "support.constant.dom",
-                "entity.other.inherited-class",
-                "punctuation.separator.namespace",
                 "meta.annotation",
                 "meta.type.cast.expr",
                 "meta.type.new.expr",
                 "meta.function.decorator.python",
                 "entity.name.attribute",
-                "support.attribute",
-                "support.type",
-                "support.class",
                 "entity.name.function.decorator",
-                "punctuation.definition.decorator.python",
                 "entity.name.type",
                 "entity.name.namespace",
+                "entity.name.scope-resolution",
                 "entity.other.attribute",
-                "entity.name.scope-resolution"
+                "entity.other.inherited-class",
+                "punctuation.separator.namespace",
+                "punctuation.definition.decorator.python"
             ],
             "settings": {
                 "foreground": "#4EC9B0FF"
@@ -376,13 +346,14 @@
         {
             "scope": [
                 "variable",
-                "meta.definition.variable.name",
                 "constant.other.placeholder",
                 "entity.name.variable",
-                "meta.object.member"
+                "meta.object.member",
+                "meta.definition.variable.name"
             ],
             "settings": {
-                "foreground": "#669EE9FF"
+                "foreground": "#669EE9FF",
+                "fontStyle": ""
             }
         },
         {
@@ -427,14 +398,23 @@
                 "keyword.other.function",
                 "variable.other.static",
                 "variable.other.enummember",
-                "variable.other.readwrite.alias"
+                "variable.other.readwrite.alias",
+                "entity.name.class.attribute.component"
             ],
             "settings": {
-                "foreground": "#2DD5FFFF"
+                "foreground": "#2DD5FFFF",
+                "fontStyle": ""
             }
         },
         {
-            "scope": ["entity.other.attribute-name", "keyword.operator.expression", "keyword.control.at-rule"],
+            "scope": ["keyword.type"],
+            "settings": {
+                "foreground": "#2DD5FFFF",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "scope": ["keyword.operator.expression", "keyword.control.at-rule", "entity.other.attribute-name.html"],
             "settings": {
                 "foreground": "#2DD5FFFF",
                 "fontStyle": "italic"
@@ -442,20 +422,8 @@
         },
         {
             "scope": [
-                "keyword.type",
                 "keyword.operator.new",
                 "keyword.operator.expression.new",
-                "support.type.primitive",
-                "storage.type.primitive",
-                "storage.type.numeric",
-                "storage.type.boolean",
-                "storage.type.string",
-                "storage.type.char",
-                "storage.type.void",
-                "storage.type.class",
-                "storage.modifier.static",
-                "storage.modifier.const",
-                "storage.modifier.readonly",
                 "keyword.other.access",
                 "keyword.other.modifier",
                 "keyword.other.static",
@@ -478,19 +446,13 @@
             }
         },
         {
-            "scope": ["support.variable"],
-            "settings": {
-                "foreground": "#7DF0D9FF"
-            }
-        },
-        {
             "scope": ["meta.property-value.scss", "meta.property-value.css", "keyword.other.unit"],
             "settings": {
                 "foreground": "#00FFC8FF"
             }
         },
         {
-            "scope": "token.warn-token",
+            "scope": ["token.warn-token"],
             "settings": {
                 "foreground": "#CD9731FF"
             }
@@ -507,14 +469,13 @@
                 "foreground": "#B267E6FF"
             }
         },
-
         {
             "name": "HTML/Markup tag name",
             "scope": [
                 "entity.name.tag",
-                "punctuation.definition.string",
                 "punctuation.support.type.property-name",
-                "entity.other.attribute-name.class.css"
+                "entity.other.attribute-name",
+                "punctuation.definition.string"
             ],
             "settings": {
                 "foreground": "#FF8989FF",
@@ -574,7 +535,13 @@
             }
         },
         {
-            "scope": ["keyword.control.cshtml.transition", "keyword.control.razor.transition", "keyword.control.razor.comment.star"],
+            "scope": [
+                "keyword.control.cshtml.transition",
+                "keyword.control.razor.transition",
+                "keyword.control.razor.comment.star",
+                "punctuation.definition.interpolation.begin.cs",
+                "punctuation.definition.interpolation.end.cs"
+            ],
             "settings": {
                 "foreground": "#FF8989FF",
                 "fontStyle": "bold"
@@ -582,20 +549,27 @@
         },
         {
             "scope": [
-                "string",
+                // "string",
                 "ref.matchtext",
-                "keyword.operator",
                 "text.html.derivative",
                 "meta.embedded.assembly",
                 "meta.property-list.scss",
                 "invalid.deprecated.semicolon",
                 "punctuation.separator.key-value",
-                "punctuation.definition.entity.css",
-                "storage.type.function.arrow.ts"
+                "storage.type.function.arrow.ts",
+                "meta.property-value.css",
+                "punctuation.definition.entity.css"
             ],
             "settings": {
                 "foreground": "#FFFFFFFF",
                 "fontStyle": ""
+            }
+        },
+        {
+            "scope": ["punctuation.accessor"],
+            "settings": {
+                "foreground": "#FFFFFFFF",
+                "fontStyle": "bold"
             }
         }
     ]
