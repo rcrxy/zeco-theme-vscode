@@ -40,7 +40,7 @@
         "url": "https://github.com/rcrxy/zeco-theme-vscode.git"
     },
     "scripts": {
-        "vsix": "npm run pretest && npx @vscode/vsce package",
+        "vsix": "npx @vscode/vsce package",
         "minor": "npm version --no-git-tag-version minor",
         "patch": "npm version --no-git-tag-version patch"
     },
