@@ -6,21 +6,14 @@
     "semanticTokenColors": {
         "*.async": "#FA72FFFF",
         "class": "#4EC9B0FF",
-        "comment": "#999999FF",
-        "controlKeyword": {
-            "foreground": "#FF8989FF",
-            "fontStyle": "italic bold"
-        },
         "function": "#FFADE4FF",
-        "keyword": "#2DD5FFFF",
         "macro": "#CE9178FF",
         "namespace": "#03C7A0FF",
         "number": "#14E901FF",
         "operator": "#FFFFFFFF",
-        "parameter": "#88FF88FF",
         "preprocessorText": "#999999FF",
-        "property": "#669EE9FF",
-        "string": "#FFFFFFFF",
+        // "property": "#669EE9FF",
+        // "string": "#FFFFFFFF",
         "text": "#999999FF",
         "type": "#4EC9B0FF",
         "variable": "#669EE9FF"
@@ -56,7 +49,7 @@
         "debugTokenExpression.error": "#FF0000FF",
         "debugTokenExpression.name": "#4FC1FFFF",
         "debugTokenExpression.number": "#14E901FF",
-        "debugTokenExpression.string": "#FFFFFFEE",
+        // "debugTokenExpression.string": "#FFFFFFEE",
         "debugTokenExpression.value": "#FFFFFFAA",
         "debugToolBar.background": "#181818FF",
         "descriptionForeground": "#9D9D9DFF",
@@ -194,7 +187,9 @@
                 "meta.embedded",
                 "source.groovy.embedded",
                 "string meta.image.inline.markdown",
-                "variable.legacy.builtin.python"
+                "variable.legacy.builtin.python",
+                "meta.template.expression",
+                "variable.language.wildcard.java"
             ],
             "settings": {
                 "foreground": "#D4D4D4FF"
@@ -208,95 +203,23 @@
             }
         },
         {
-            "scope": "emphasis",
-            "settings": {
-                "fontStyle": "italic"
-            }
-        },
-        {
-            "scope": "strong",
-            "settings": {
-                "fontStyle": "bold"
-            }
-        },
-        {
             "scope": "header",
             "settings": {
                 "foreground": "#000080FF"
             }
         },
         {
-            "scope": "constant.language",
+            "scope": [
+                "constant.language",
+                "markup.changed",
+                "meta.diff.header",
+                "punctuation.definition.template-expression.begin",
+                "punctuation.definition.template-expression.end",
+                "punctuation.section.embedded",
+                "variable.language"
+            ],
             "settings": {
                 "foreground": "#569CD6FF"
-            }
-        },
-        {
-            "scope": "constant.regexp",
-            "settings": {
-                "foreground": "#646695FF"
-            }
-        },
-        {
-            "name": "HTML/Markup tag name",
-            "scope": [
-                "entity.name.tag",
-                "entity.name.tag.css",
-                "entity.name.tag.less",
-                "entity.name.tag.jsx",
-                "entity.name.tag.tsx",
-                "punctuation.definition.string",
-                "punctuation.support.type.property-name",
-                "entity.other.attribute-name.class.css"
-            ],
-            "settings": {
-                "foreground": "#FF8989FF",
-                "fontStyle": ""
-            }
-        },
-        {
-            "name": "HTML 属性 key",
-            "scope": [
-                "entity.other.attribute-name",
-                "entity.other.attribute-name.html",
-                "entity.other.attribute-name.xml",
-                "entity.other.attribute-name.jsx",
-                "entity.other.attribute-name.tsx",
-                "entity.other.attribute-name.js",
-                "entity.other.attribute-name.ts"
-            ],
-            "settings": {
-                "foreground": "#2DD5FFFF",
-                "fontStyle": "italic"
-            }
-        },
-        {
-            "name": "CSS/SCSS 属性/选择器 key",
-            "scope": [
-                "source.css entity.other.attribute-name.class",
-                "entity.other.attribute-name.id.css",
-                "entity.other.attribute-name.parent-selector.css",
-                "entity.other.attribute-name.parent.less",
-                "source.css entity.other.attribute-name.pseudo-class",
-                "entity.other.attribute-name.pseudo-element.css",
-                "source.css.less entity.other.attribute-name.id",
-                "entity.other.attribute-name.scss"
-            ],
-            "settings": {
-                "foreground": "#2DD5FFFF",
-                "fontStyle": "italic"
-            }
-        },
-        {
-            "scope": "invalid",
-            "settings": {
-                "foreground": "#F44747FF"
-            }
-        },
-        {
-            "scope": "markup.underline",
-            "settings": {
-                "fontStyle": "underline"
             }
         },
         {
@@ -308,33 +231,35 @@
             }
         },
         {
-            "scope": "markup.italic",
-            "settings": {
-                "fontStyle": "italic"
-            }
-        },
-        {
             "scope": "markup.strikethrough",
             "settings": {
                 "fontStyle": "strikethrough"
             }
         },
         {
-            "scope": "markup.inserted",
+            "scope": ["markup.inserted", "constant.sha.git-rebase"],
             "settings": {
                 "foreground": "#B5CEA8FF"
             }
         },
         {
-            "scope": "markup.deleted",
+            "scope": [
+                "markup.deleted",
+                "markup.inline.raw",
+                "meta.preprocessor",
+                "entity.name.function.preprocessor",
+                "entity.name.macro",
+                "support.function.macro",
+                "support.constant.property-value",
+                "support.constant.font-name",
+                "support.constant.media-type",
+                "support.constant.media",
+                "constant.other.color.rgb-value",
+                "constant.other.rgb-value",
+                "support.constant.color"
+            ],
             "settings": {
                 "foreground": "#CE9178FF"
-            }
-        },
-        {
-            "scope": "markup.changed",
-            "settings": {
-                "foreground": "#569CD6FF"
             }
         },
         {
@@ -344,15 +269,9 @@
             }
         },
         {
-            "scope": "punctuation.definition.list.begin.markdown",
+            "scope": ["punctuation.definition.list.begin.markdown", "token.info-token"],
             "settings": {
                 "foreground": "#6796E6FF"
-            }
-        },
-        {
-            "scope": "markup.inline.raw",
-            "settings": {
-                "foreground": "#CE9178FF"
             }
         },
         {
@@ -363,133 +282,48 @@
             }
         },
         {
-            "scope": "meta.structure.dictionary.key.python",
-            "settings": {
-                "foreground": "#9CDCFEFF"
-            }
-        },
-        {
-            "scope": "meta.diff.header",
-            "settings": {
-                "foreground": "#569CD6FF"
-            }
-        },
-        {
-            "name": "预处理/宏",
             "scope": [
-                "meta.preprocessor",
-                "entity.name.function.preprocessor",
-                "entity.name.function.preprocessor.*",
-                "entity.name.macro",
-                "support.function.macro"
-            ],
-            "settings": {
-                "foreground": "#CE9178FF"
-            }
-        },
-        {
-            "name": "string literals",
-            "scope": [
-                "string",
-                "string.tag",
-                "string.value",
-                "string.interpolated",
-                "string.quoted",
-                "string.double",
-                "string.single",
-                "string.template",
-                "string.unquoted",
-                "meta.embedded.assembly"
-            ],
-            "settings": {
-                "foreground": "#FFFFFFFF"
-            }
-        },
-        {
-            "name": "regex strings",
-            "scope": ["string.regexp", "string.regex", "string.regexp.*"],
-            "settings": {
-                "foreground": "#FFFFFFFF"
-            }
-        },
-        {
-            "name": "字符串引号",
-            "scope": ["punctuation.definition.string.begin", "punctuation.definition.string.end"],
-            "settings": {
-                "foreground": "#FF8989FF"
-            }
-        },
-        {
-            "scope": [
-                "punctuation.definition.template-expression.begin",
-                "punctuation.definition.template-expression.end",
-                "punctuation.section.embedded"
-            ],
-            "settings": {
-                "foreground": "#569CD6FF"
-            }
-        },
-        {
-            "scope": ["meta.template.expression"],
-            "settings": {
-                "foreground": "#D4D4D4FF"
-            }
-        },
-        {
-            "scope": [
+                "meta.structure.dictionary.key.python",
                 "support.type.vendored.property-name",
                 "support.type.property-name",
                 "source.css variable",
-                "source.coffee.embedded"
+                "source.coffee.embedded",
+                "support.function.git-rebase",
+                "meta.object-literal.key"
             ],
             "settings": {
                 "foreground": "#9CDCFEFF"
             }
         },
         {
-            "scope": "support.function.git-rebase",
+            "scope": ["string.regexp", "string.regex"],
             "settings": {
-                "foreground": "#9CDCFEFF"
-            }
-        },
-        {
-            "scope": "constant.sha.git-rebase",
-            "settings": {
-                "foreground": "#B5CEA8FF"
-            }
-        },
-        {
-            "scope": ["storage.modifier.import.java", "variable.language.wildcard.java", "storage.modifier.package.java"],
-            "settings": {
-                "foreground": "#D4D4D4FF"
-            }
-        },
-        {
-            "scope": "variable.language",
-            "settings": {
-                "foreground": "#569CD6FF"
+                "foreground": "#e0d292"
             }
         },
         {
             "name": "普通方法/函数",
             "scope": [
-                "support.function.builtin",
-                "support.function.builtin.python",
-                "support.function.builtin.js",
-                "support.function.builtin.ts",
                 "support.constant.handlebars",
                 "source.powershell variable.other.member",
-                "entity.name.operator.custom-literal"
+                "entity.name.operator.custom-literal",
+                "support.function",
+                "entity.name.function"
             ],
             "settings": {
                 "foreground": "#FFADE4FF"
             }
         },
         {
+            "scope": ["entity.name.function.extension", "support.function.extension"],
+            "settings": {
+                "foreground": "#FFADE4FF",
+                "fontStyle": "italic"
+            }
+        },
+        {
             "scope": [
-                "entity.name.namespace",
-                "entity.other.attribute",
-                "entity.name.scope-resolution",
+                "storage.type",
                 "storage.type.numeric.go",
                 "storage.type.byte.go",
                 "storage.type.boolean.go",
@@ -497,13 +331,11 @@
                 "storage.type.uintptr.go",
                 "storage.type.error.go",
                 "storage.type.rune.go",
-                "storage.type.cs",
                 "storage.type.generic.cs",
                 "storage.type.modifier.cs",
                 "storage.type.variable.cs",
                 "storage.type.annotation.java",
                 "storage.type.generic.java",
-                "storage.type.java",
                 "storage.type.object.array.java",
                 "storage.type.primitive.array.java",
                 "storage.type.primitive.java",
@@ -515,10 +347,27 @@
                 "storage.type.object.array.groovy",
                 "storage.type.primitive.array.groovy",
                 "storage.type.primitive.groovy",
-                "storage.type.c",
                 "storage.type.primitive.c",
-                "storage.type.cpp",
-                "storage.type.primitive.cpp"
+                "storage.type.primitive.cpp",
+                "storage.type.attribute",
+                "support.constant.math",
+                "support.constant.dom",
+                "entity.other.inherited-class",
+                "punctuation.separator.namespace",
+                "meta.annotation",
+                "meta.type.cast.expr",
+                "meta.type.new.expr",
+                "meta.function.decorator.python",
+                "entity.name.attribute",
+                "support.attribute",
+                "support.type",
+                "support.class",
+                "entity.name.function.decorator",
+                "punctuation.definition.decorator.python",
+                "entity.name.type",
+                "entity.name.namespace",
+                "entity.other.attribute",
+                "entity.name.scope-resolution"
             ],
             "settings": {
                 "foreground": "#4EC9B0FF"
@@ -526,53 +375,22 @@
         },
         {
             "scope": [
-                "meta.type.cast.expr",
-                "meta.type.new.expr",
-                "support.constant.math",
-                "support.constant.dom",
-                "entity.other.inherited-class",
-                "punctuation.separator.namespace",
-                "punctuation.separator.namespace.ruby",
-                "punctuation.separator.namespace.cpp",
-                "punctuation.separator.namespace.c"
+                "variable",
+                "meta.definition.variable.name",
+                "constant.other.placeholder",
+                "entity.name.variable",
+                "meta.object.member"
             ],
-            "settings": {
-                "foreground": "#4EC9B0FF"
-            }
-        },
-        {
-            "name": "局部变量",
-            "scope": ["meta.definition.variable.name", "constant.other.placeholder"],
             "settings": {
                 "foreground": "#669EE9FF"
             }
         },
         {
-            "name": "静态/常量/枚举成员",
-            "scope": ["variable.other.enummember", "variable.other.static"],
-            "settings": {
-                "foreground": "#2DD5FFFF"
-            }
-        },
-        {
-            "name": "布尔值",
-            "scope": [
-                "constant.language.boolean",
-                "constant.language.boolean.true",
-                "constant.language.boolean.false",
-                "constant.language.true",
-                "constant.language.false"
-            ],
-            "settings": {
-                "foreground": "#2DD5FFFF",
-                "fontStyle": "italic bold"
-            }
-        },
-        {
             "name": "函数形参",
-            "scope": ["variable.parameter", "entity.name.variable.parameter", "meta.parameter"],
+            "scope": ["variable.parameter", "entity.name.variable.parameter", "meta.parameter", "constant.numeric"],
             "settings": {
-                "foreground": "#14E901FF"
+                "foreground": "#88FF88FF",
+                "fontStyle": ""
             }
         },
         {
@@ -589,49 +407,6 @@
             }
         },
         {
-            "name": "扩展方法 (C#)",
-            "scope": ["entity.name.function.extension", "support.function.extension"],
-            "settings": {
-                "foreground": "#FFADE4FF",
-                "fontStyle": "italic"
-            }
-        },
-        {
-            "name": "注解/装饰器",
-            "scope": [
-                "meta.annotation",
-                "storage.type.attribute",
-                "entity.name.attribute",
-                "support.attribute",
-                "meta.function.decorator.python",
-                "entity.name.function.decorator",
-                "punctuation.definition.decorator.python"
-            ],
-            "settings": {
-                "foreground": "#4EC9B0FF"
-            }
-        },
-        {
-            "scope": ["meta.object-literal.key"],
-            "settings": {
-                "foreground": "#9CDCFEFF"
-            }
-        },
-        {
-            "scope": [
-                "support.constant.property-value",
-                "support.constant.font-name",
-                "support.constant.media-type",
-                "support.constant.media",
-                "constant.other.color.rgb-value",
-                "constant.other.rgb-value",
-                "support.constant.color"
-            ],
-            "settings": {
-                "foreground": "#CE9178FF"
-            }
-        },
-        {
             "name": "实体标签/label",
             "scope": "entity.name.label",
             "settings": {
@@ -640,71 +415,59 @@
             }
         },
         {
-            "scope": "constant.numeric",
+            "scope": [
+                "storage.type",
+                "entity.name.class",
+                "keyword.other.namespace",
+                "keyword.declaration",
+                "keyword.other.class",
+                "keyword.other.let",
+                "keyword.other.var",
+                "keyword.other.const",
+                "keyword.other.function",
+                "variable.other.static",
+                "variable.other.enummember",
+                "variable.other.readwrite.alias"
+            ],
             "settings": {
-                "foreground": "#14E901FF"
+                "foreground": "#2DD5FFFF"
             }
         },
         {
-            "scope": "entity.name.type",
-            "settings": {
-                "foreground": "#4EC9B0FF"
-            }
-        },
-        {
-            "scope": "entity.name.class",
+            "scope": ["entity.other.attribute-name", "keyword.operator.expression", "keyword.control.at-rule"],
             "settings": {
                 "foreground": "#2DD5FFFF",
-                "fontStyle": ""
+                "fontStyle": "italic"
             }
         },
         {
-            "scope": "support.type",
-            "settings": {
-                "foreground": "#4EC9B0FF"
-            }
-        },
-        {
-            "scope": "support.class",
-            "settings": {
-                "foreground": "#4EC9B0FF"
-            }
-        },
-        {
-            "scope": "support.function",
-            "settings": {
-                "foreground": "#FFADE4FF"
-            }
-        },
-        {
-            "scope": "variable",
-            "settings": {
-                "foreground": "#669EE9FF"
-            }
-        },
-        {
-            "scope": "entity.name.variable",
-            "settings": {
-                "foreground": "#669EE9FF"
-            }
-        },
-        {
-            "scope": "keyword - keyword.operator",
-            "settings": {
-                "foreground": "#4EC9B0FF"
-            }
-        },
-        {
-            "scope": "storage",
-            "settings": {
-                "foreground": "#4EC9B0FF"
-            }
-        },
-        {
-            "scope": "storage.type",
+            "scope": [
+                "keyword.type",
+                "keyword.operator.new",
+                "keyword.operator.expression.new",
+                "support.type.primitive",
+                "storage.type.primitive",
+                "storage.type.numeric",
+                "storage.type.boolean",
+                "storage.type.string",
+                "storage.type.char",
+                "storage.type.void",
+                "storage.type.class",
+                "storage.modifier.static",
+                "storage.modifier.const",
+                "storage.modifier.readonly",
+                "keyword.other.access",
+                "keyword.other.modifier",
+                "keyword.other.static",
+                "constant.language.boolean",
+                "constant.language.true",
+                "constant.language.false",
+                "constant.language.null",
+                "constant.language.json.comments"
+            ],
             "settings": {
                 "foreground": "#2DD5FFFF",
-                "fontStyle": ""
+                "fontStyle": "italic bold"
             }
         },
         {
@@ -715,50 +478,15 @@
             }
         },
         {
-            "scope": ["support.constant.json", "support.variable.property"],
-            "settings": {
-                "foreground": "#6479EDFF",
-                "fontStyle": ""
-            }
-        },
-        {
-            "scope": ["variable.other.constant"],
-            "settings": {
-                "foreground": "#669EE9FF",
-                "fontStyle": ""
-            }
-        },
-        {
-            "scope": ["entity.name.function"],
-            "settings": {
-                "foreground": "#FFADE4FF",
-                "fontStyle": ""
-            }
-        },
-        {
             "scope": ["support.variable"],
             "settings": {
-                "foreground": "#7DF0D9FF",
-                "fontStyle": ""
+                "foreground": "#7DF0D9FF"
             }
         },
         {
             "scope": ["meta.property-value.scss", "meta.property-value.css", "keyword.other.unit"],
             "settings": {
-                "foreground": "#00FFC8FF",
-                "fontStyle": ""
-            }
-        },
-        {
-            "scope": "ref.matchtext",
-            "settings": {
-                "foreground": "#FFFFFFFF"
-            }
-        },
-        {
-            "scope": "token.info-token",
-            "settings": {
-                "foreground": "#6796E6FF"
+                "foreground": "#00FFC8FF"
             }
         },
         {
@@ -779,73 +507,37 @@
                 "foreground": "#B267E6FF"
             }
         },
+
         {
-            "name": "本地配置：访问符与箭头操作符",
-            "scope": ["punctuation.accessor", "keyword.operator.arrow"],
+            "name": "HTML/Markup tag name",
+            "scope": [
+                "entity.name.tag",
+                "punctuation.definition.string",
+                "punctuation.support.type.property-name",
+                "entity.other.attribute-name.class.css"
+            ],
             "settings": {
-                "foreground": "#FFFFFFFF",
-                "fontStyle": "bold"
+                "foreground": "#FF8989FF",
+                "fontStyle": ""
             }
         },
         {
-            "name": "本地配置：语言关键字与特殊值",
+            "name": "Razor Markup",
+            "scope": ["entity.name.class.element.component", "entity.name.class.element.taghelper", "entity.name.tag.html.vue"],
+            "settings": {
+                "foreground": "#FF8989FF",
+                "fontStyle": "italic"
+            }
+        },
+        {
             "scope": [
-                "punctuation.definition.entity.css",
                 "variable.language.this",
-                "storage.modifier",
                 "punctuation.separator.hash.cs",
                 "variable.language.super",
                 "keyword.operator.expression.await",
                 "keyword.operator.expression.delete",
                 "keyword.other.directive.using",
-                "constant.language.undefined.ts",
-                "constant.language.null.ts"
-            ],
-            "settings": {
-                "foreground": "#FF8989FF",
-                "fontStyle": "italic bold"
-            }
-        },
-        {
-            "name": "本地配置：属性与表达式操作符",
-            "scope": ["entity.other.attribute-name.pseudo-class", "keyword.operator.expression"],
-            "settings": {
-                "foreground": "#2DD5FFFF",
-                "fontStyle": "italic"
-            }
-        },
-        {
-            "scope": "variable.other.readwrite.alias",
-            "settings": {
-                "foreground": "#2DD5FFFF",
-                "fontStyle": ""
-            }
-        },
-        {
-            "scope": "keyword.other.using.cs",
-            "settings": {
-                "foreground": "#2DD5FFFF",
-                "fontStyle": "bold"
-            }
-        },
-        {
-            "scope": ["keyword.operator.new", "keyword.operator.expression.new"],
-            "settings": {
-                "foreground": "#2DD5FFFF",
-                "fontStyle": "italic bold"
-            }
-        },
-        {
-            "scope": "storage.type.function.arrow",
-            "settings": {
-                "foreground": "#FFADE4FF",
-                "fontStyle": "bold"
-            }
-        },
-        {
-            "name": "操作类关键字 (if/else/for/while/return 等)",
-            "scope": [
-                "keyword.control",
+                "constant.language.undefined",
                 "keyword.control.conditional",
                 "keyword.control.loop",
                 "keyword.control.switch",
@@ -860,7 +552,21 @@
                 "keyword.control.do",
                 "keyword.control.try",
                 "keyword.control.catch",
-                "keyword.control.finally"
+                "keyword.control.finally",
+                "keyword.other.using",
+                "keyword.control.trycatch",
+                "keyword.control.export",
+                "keyword.control.razor.directive.code",
+                "keyword.control.razor.directive.implements",
+                "keyword.control.razor.directive.page",
+                "keyword.control.exception.try",
+                "keyword.control.exception.catch",
+                "keyword.control.exception.finally",
+                "keyword.control.import",
+                "keyword.control.from",
+                "keyword.control.each",
+                "keyword.control.operator",
+                "storage.modifier"
             ],
             "settings": {
                 "foreground": "#FF8989FF",
@@ -868,103 +574,27 @@
             }
         },
         {
-            "name": "类型类关键字 (int/float/double/char/void/bool 等)",
-            "scope": [
-                "storage.type.primitive",
-                "storage.type.numeric",
-                "storage.type.boolean",
-                "storage.type.string",
-                "storage.type.char",
-                "storage.type.void",
-                "support.type.primitive",
-                "support.type.primitive.*",
-                "keyword.type"
-            ],
+            "scope": ["keyword.control.cshtml.transition", "keyword.control.razor.transition", "keyword.control.razor.comment.star"],
             "settings": {
-                "foreground": "#2DD5FFFF",
-                "fontStyle": "italic bold"
+                "foreground": "#FF8989FF",
+                "fontStyle": "bold"
             }
         },
         {
-            "name": "标注类关键字 (public/private/protected/static/final/const 等)",
             "scope": [
-                "storage.modifier.cs",
-                "storage.modifier.static",
-                "storage.modifier.ts",
-                "storage.modifier.java",
-                "storage.modifier.cpp",
-                "keyword.other.access",
-                "keyword.other.access.*",
-                "keyword.other.modifier",
-                "keyword.other.static",
-                "storage.modifier.const",
-                "storage.modifier.readonly"
-            ],
-            "settings": {
-                "foreground": "#2DD5FFFF",
-                "fontStyle": "italic bold"
-            }
-        },
-        {
-            "name": "操作符关键字 (. + - * / = == != > < >= <= 等)",
-            "scope": [
+                "string",
+                "ref.matchtext",
                 "keyword.operator",
-                "keyword.operator.assignment",
-                "keyword.operator.assignment.*",
-                "keyword.operator.arithmetic",
-                "keyword.operator.comparison",
-                "keyword.operator.relational",
-                "keyword.operator.logical",
-                "keyword.operator.bitwise",
-                "keyword.operator.increment",
-                "keyword.operator.decrement",
-                "keyword.operator.ternary",
-                "keyword.operator.spread",
-                "keyword.operator.rest",
-                "keyword.operator.delete",
-                "keyword.operator.expression.*",
-                "keyword.operator.instanceof",
-                "keyword.operator.typeof",
-                "keyword.operator.in",
-                "keyword.operator.of",
-                "keyword.operator.keyof",
-                "keyword.operator.await",
-                "meta.property-list.scss",
                 "text.html.derivative",
+                "meta.embedded.assembly",
+                "meta.property-list.scss",
+                "invalid.deprecated.semicolon",
                 "punctuation.separator.key-value",
-                "keyword.operator.assignment.cs",
-                "invalid.deprecated.semicolon"
+                "punctuation.definition.entity.css",
+                "storage.type.function.arrow.ts"
             ],
             "settings": {
                 "foreground": "#FFFFFFFF",
-                "fontStyle": ""
-            }
-        },
-        {
-            "name": "声明类关键字 (let/var/function/class/interface/enum 等)",
-            "scope": [
-                "keyword.declaration",
-                "keyword.declaration.function",
-                "keyword.declaration.class",
-                "keyword.declaration.interface",
-                "keyword.declaration.enum",
-                "storage.type.function",
-                "storage.type.class",
-                "storage.type.interface",
-                "storage.type.enum",
-                "storage.type.namespace",
-                "keyword.other.namespace",
-                "keyword.other.class",
-                "storage.type.let",
-                "storage.type.var",
-                "storage.type.const",
-                "keyword.other.let",
-                "keyword.other.var",
-                "keyword.other.const",
-                "keyword.other.function"
-            ],
-            "settings": {
-                "foreground": "#2DD5FFFF",
                 "fontStyle": ""
             }
         }

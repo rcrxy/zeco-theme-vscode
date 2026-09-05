@@ -4,6 +4,7 @@
 .vscode/**
 .vscode-test/**
 node_modules/**
+demo/**
 *.vsix
 package-lock.json
 images/icon.svg
