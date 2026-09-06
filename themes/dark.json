@@ -492,6 +492,7 @@
         },
         {
             "scope": [
+                "storage.modifier",
                 "variable.language.this",
                 "punctuation.separator.hash.cs",
                 "variable.language.super",
@@ -527,7 +528,9 @@
                 "keyword.control.from",
                 "keyword.control.each",
                 "keyword.control.operator",
-                "storage.modifier"
+                "keyword.control.context.using",
+                "keyword.control.context.lock",
+                "keyword.control.exception.when"
             ],
             "settings": {
                 "foreground": "#FF8989FF",
