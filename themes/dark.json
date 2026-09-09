@@ -399,7 +399,8 @@
                 "variable.other.static",
                 "variable.other.enummember",
                 "variable.other.readwrite.alias",
-                "entity.name.class.attribute.component"
+                "entity.name.class.attribute.component",
+                "entity.other.attribute-name.localname.xml"
             ],
             "settings": {
                 "foreground": "#2DD5FFFF",
@@ -407,7 +408,7 @@
             }
         },
         {
-            "scope": ["keyword.type"],
+            "scope": ["keyword.type", "keyword.other.attribute-specifier.cs"],
             "settings": {
                 "foreground": "#2DD5FFFF",
                 "fontStyle": "bold"
@@ -446,7 +447,12 @@
             }
         },
         {
-            "scope": ["meta.property-value.scss", "meta.property-value.css", "keyword.other.unit"],
+            "scope": [
+                "meta.property-value.scss",
+                "meta.property-value.css",
+                "keyword.other.unit",
+                "entity.other.attribute-name.namespace.xml"
+            ],
             "settings": {
                 "foreground": "#00FFC8FF"
             }
@@ -517,9 +523,6 @@
                 "keyword.control.finally",
                 "keyword.control.trycatch",
                 "keyword.control.export",
-                "keyword.control.razor.directive.code",
-                "keyword.control.razor.directive.implements",
-                "keyword.control.razor.directive.page",
                 "keyword.control.exception.try",
                 "keyword.control.exception.catch",
                 "keyword.control.exception.finally",
@@ -530,7 +533,7 @@
                 "keyword.control.context.using",
                 "keyword.control.context.lock",
                 "keyword.control.exception.when",
-                "keyword.control.razor.directive.namespace",
+                "keyword.control.razor.directive",
                 "keyword.other.using"
             ],
             "settings": {
@@ -562,7 +565,8 @@
                 "punctuation.separator.key-value",
                 "storage.type.function.arrow.ts",
                 "meta.property-value.css",
-                "punctuation.definition.entity.css"
+                "punctuation.definition.entity.css",
+                "punctuation.separator.namespace.xml"
             ],
             "settings": {
                 "foreground": "#FFFFFFFF",
