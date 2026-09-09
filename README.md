@@ -33,17 +33,37 @@ A carefully tuned dark color theme for Visual Studio Code, created by **zeco**.
 ## Packaging
 
 ```powershell
-npx --no-install vsce package
+npm ci
+npm run validate
+npm run vsix
 ```
 
-## Publishing
+Every push to `main` and every pull request targeting `main` runs the package
+workflow. The resulting `zeco-theme.vsix` is available as a GitHub Actions
+artifact.
 
-Publishing requires access to the `zeco` publisher on the Visual Studio Code Marketplace.
+## Automated publishing
+
+Publishing requires access to the `zeco` publisher on the Visual Studio Code
+Marketplace. Add a repository Actions secret named `VSCE_PAT` containing the
+Marketplace personal access token.
+
+To publish a release:
+
+1. Update `version` in `package.json` and `package-lock.json` with `npm run patch`
+   or `npm run minor`.
+2. Update `CHANGELOG.md`, commit the release changes, and push `main`.
+3. Create and push a tag matching the package version exactly:
 
 ```powershell
-npx --no-install vsce login zeco
-npx --no-install vsce publish
+$version = node -p "require('./package.json').version"
+git tag "v$version"
+git push origin "v$version"
 ```
+
+The release workflow validates the tag, packages the extension, publishes that
+exact VSIX to the Visual Studio Marketplace, and creates a GitHub Release with
+the VSIX attached. A mismatched tag and package version stops the release.
 
 ## Author
 
